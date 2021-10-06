@@ -60,7 +60,7 @@ EOF
     {
         "inbounds": [
             {
-                "port": 8080,
+                "port": 5000,
                 "protocol": "vmess",
                 "settings": {
                     "clients": [
