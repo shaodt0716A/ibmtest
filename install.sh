@@ -109,7 +109,7 @@ clone_repo(){
         echo 'error: 获取最新V2Ray版本号失败。请重试'
         exit 1
     fi
-    RELEASE_LATEST="$(sed 'y/,/\n/' "$TMP_FILE" | grep 'tag_name' | awk -F '"' '{print $4}')"
+    RELEASE_LATEST="$(sed 'y/,n/' "$TMP_FILE" | grep 'tag_name' | awk -F '"' '{print $4}')"
     rm "$TMP_FILE"
     echo "当前最新V2Ray版本为$RELEASE_LATEST"
     # Download latest release
