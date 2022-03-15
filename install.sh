@@ -9,9 +9,9 @@ create_mainfest_file(){
     echo "用户名称：${IBM_User_NAME}"
     read -p "请输入你的密码：" IBM_Passwd
     echo "用户密码：${IBM_Passwd}"
+    ibmcloud login -a "https://cloud.ibm.com" -r "eu-gb" -u "${IBM_User_NAME}" -p "${IBM_Passwd}"
     read -p "请输入你的资源id: " IBM_Resource
     echo "资源id: ${IBM_Resource}"
-    ibmcloud login -a "https://cloud.ibm.com" -r "eu-gb" -u "${IBM_User_NAME}" -p "${IBM_Passwd}"
     ibmcloud target -g "${IBM_Resource}"
     read -p "请输入你的应用名称：" IBM_APP_NAME
     echo "应用名称：${IBM_APP_NAME}"
